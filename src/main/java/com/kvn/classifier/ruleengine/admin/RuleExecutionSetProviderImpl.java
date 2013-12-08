@@ -15,6 +15,8 @@ import org.w3c.dom.Element;
  * TODO implementation;
  * 
  */
+
+@SuppressWarnings("rawtypes")
 public class RuleExecutionSetProviderImpl implements RuleExecutionSetProvider {
 
   @Override

@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class ClassificationResult<T> implements Comparable<T> {
 
-  Map<T, Double> belongToClasses;
+  Map<T, Double> belongToClassifications;
 
   @Override
   public int compareTo(T o) {

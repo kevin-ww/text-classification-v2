@@ -57,6 +57,10 @@ public class RuleSet implements Serializable {
     return null;
   }
 
+  public List<Rule> getRules() {
+    return rules;
+  }
+
   @Override
   public String toString() {
     return "RuleSet [name=" + name + ", description=" + description

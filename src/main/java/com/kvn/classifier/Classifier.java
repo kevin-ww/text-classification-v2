@@ -1,5 +1,9 @@
 package com.kvn.classifier;
 
+import java.util.List;
+
+import com.kvn.classifier.common.ProductReview;
+
 /**
  * Multi-label classification
  * http://en.wikipedia.org/wiki/Multi-label_classification
@@ -20,6 +24,8 @@ package com.kvn.classifier;
  * classification. In other words, rather than trying to convert the problem to
  * a simpler problem, they try to address the problem in its full form.
  */
-public interface Classifier {
+public interface Classifier<T> {
+
+  List<String> classifer(T obj) throws Exception;
 
 }

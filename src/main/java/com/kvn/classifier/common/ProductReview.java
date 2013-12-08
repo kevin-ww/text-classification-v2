@@ -2,14 +2,15 @@ package com.kvn.classifier.common;
 
 import java.util.Date;
 
-/**
- * HEADER : cid,shop,品牌,标题,内容,评分,评级,标签,标签个数,日期
- * 
- * SAMPLE LINE: 51888ba681856da1e622b728,TMALL,可瑞康,,儿子一直在这里买这个奶粉
- * ，喝着不上火挺好的，就是平时活动太少了，运费也上涨了,5,好评,品牌口碑/产品口味/价格,3,2013-05-01 00:03:01,
- * 
- */
 public class ProductReview {
+
+  /**
+   * HEADER : cid,shop,品牌,标题,内容,评分,评级,标签,标签个数,日期
+   * 
+   * SAMPLE LINE: 51888ba681856da1e622b728,TMALL,可瑞康,,儿子一直在这里买这个奶粉
+   * ，喝着不上火挺好的，就是平时活动太少了，运费也上涨了,5,好评,品牌口碑/产品口味/价格,3,2013-05-01 00:03:01,
+   * 
+   */
 
   public final String PRODUCT_REVIEW_HEADER = "cid,shop,品牌,标题,内容,评分,评级,标签,标签个数,日期";
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+
+
+	<bean id="logisticsRule" class="com.kvn.classifier.ruleengine.rule.LogisticsRule">
+		<!-- <constructor-arg type="int" value="0" /> -->
+		<property name="expressions">
+			<list>
+				<value><![CDATA[(速度|到货)(快|给力|慢)]]></value>
+				<value><![CDATA[物流|快递|送货|发货]]></value>
+				<value><![CDATA[(运费|邮费)(便宜|包邮|贵|高|涨)]]></value>
+				<value><![CDATA[迅速|神速|及时|龟速|急|不送上门|扔传达室|不通知|额外收费|送错|代签|查不到记录]]></value>
+				<value><![CDATA[变型|压扁|爆罐|瘪|被压变形|洞|损坏|压坏|破损]]></value>
+			</list>
+		</property>
+	</bean>
+</beans>

@@ -64,7 +64,7 @@ public class RuleExecutionSetImpl implements RuleExecutionSet {
 
   @Override
   public List<Rule> getRules() {
-    return null;
+    return this.ruleSet.getRules();
   }
 
   @Override

@@ -1,21 +1,22 @@
 package com.kvn.classifier.common;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductReviewWithLabels {
 
   private ProductReview originalProductReview;
 
-  private String[] labels;
+  private List<String> labels;
 
   public ProductReviewWithLabels(ProductReview originalProductReview) {
     this(originalProductReview, null);
   }
 
   public ProductReviewWithLabels(ProductReview originalProductReview,
-      String[] labels) {
-    this.originalProductReview = originalProductReview;
-    this.labels = labels;
+      List<String> labels) {
+    this.setOriginalProductReview(originalProductReview);
+    this.setLabels(labels);
   }
 
   public ProductReview getOriginalProductReview() {
@@ -26,18 +27,34 @@ public class ProductReviewWithLabels {
     this.originalProductReview = originalProductReview;
   }
 
-  public String[] getLabels() {
+  public List<String> getLabels() {
     return labels;
   }
 
-  public void setLabels(String[] labels) {
+  public void setLabels(List<String> labels) {
     this.labels = labels;
+  }
+
+  public void setLabel(String label) {
+
+    if (this.labels == null) {
+      this.labels = new ArrayList<String>();
+    }
+    this.labels.add(label);
   }
 
   @Override
   public String toString() {
-    return "ProductReviewWithLabels [originalProductReview="
-        + originalProductReview + ", labels=" + Arrays.toString(labels) + "]";
+    // return "ProductReviewWithLabels [originalProductReview="
+    // + originalProductReview + ", labels=" + labels + "]";
+
+    StringBuilder s = new StringBuilder();
+
+    s.append(this.originalProductReview.getUid()).append("|");
+    s.append(this.originalProductReview.getReviewText()).append("|");
+    s.append(this.getLabels());
+
+    return s.toString();
   }
 
 }

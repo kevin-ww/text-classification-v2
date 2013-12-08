@@ -13,7 +13,7 @@ import javax.rules.admin.RuleExecutionSet;
 
 import com.kvn.classifier.ruleengine.admin.RuleExecutionSetRepository;
 
-@SuppressWarnings("rawtypes")
+//@SuppressWarnings("rawtypes")
 public class StatelessRuleSessionImpl extends AbstractRuleSessionImpl implements
     StatelessRuleSession {
 
@@ -50,12 +50,25 @@ public class StatelessRuleSessionImpl extends AbstractRuleSessionImpl implements
     return executeRules(objects, null);
   }
 
+  /*
+   * (non-Javadoc)
+   * 
+   * @see javax.rules.StatelessRuleSession#executeRules(java.util.List,
+   * javax.rules.ObjectFilter)
+   * 
+   * not using filter at this point;
+   */
   @Override
   public List executeRules(List objects, ObjectFilter filter)
       throws InvalidRuleSessionException, RemoteException {
-    System.out.println("now applying rules" + this.ruleExecutionSet + " for "
-        + objects);
-    return null;
+
+    // System.out.println("now applying rules" + this.ruleExecutionSet + " for "
+    // + objects);
+    // using the short alived working memory for applying rules to the incoming
+    // objects;
+    SimpleWorkingMemory workingMemory = new SimpleWorkingMemory(
+        this.ruleExecutionSet, objects);
+    return workingMemory.applyRules();
   }
 
   @Override

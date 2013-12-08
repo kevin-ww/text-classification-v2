@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+
+
+	<bean id="brandRule" class="com.kvn.classifier.ruleengine.rule.BrandRule">
+		<property name="expressions">
+			<list>
+				<value><![CDATA[正品|期待|希望|安全|放心|有保障|信得过|真货|真的|质疑|假的|可瑞佳|可瑞康|不知道真假|失望|担忧]]></value>
+				<value><![CDATA[原装|原罐|灌装]]></value>
+				<value><![CDATA[新西兰|中国|本土|澳洲|香港|荷兰|海外|代购|直邮|国内]]></value>
+			</list>
+		</property>
+	</bean>
+</beans>
