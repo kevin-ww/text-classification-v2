@@ -1,0 +1,996 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>分词：词性标注北大标准 - zhoubl668的专栏：远帆，梦之帆！
+        - 博客频道 - CSDN.NET</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="汉语词性对照表[北大标准/中科院标准]&#160;&#160;&#160;词性编码词性名称注 解Ag形语素形容词性语素。形容词代码为 a，语素代码ｇ前面置以A。a形容词取英语形容词 adjective的第1个字母。ad副形词直接作状语的形容词。形容词代码" />
+    <script src="http://static.blog.csdn.net/scripts/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://static.blog.csdn.net/scripts/ad.js?v=1.1"></script>
+    <link rel="Stylesheet" type="text/css" href="http://static.blog.csdn.net/skin/default/css/style.css?v=1.1" />
+    <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="/zhoubl668/rss/list" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/default.css" />
+
+</head>
+<body>
+    <script src="http://csdnimg.cn/pubnav/js/pub_topnav_2011.js" type="text/javascript"></script>
+    <div id="container">
+        <div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h1>
+                <a href="http://blog.csdn.net/zhoubl668">zhoubl668的专栏：远帆，梦之帆！</a></h1>
+            <h2>心好，一切都好！</h2>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg">
+    </div>
+    <div class="navigator">
+        <ul>
+                <li id="btnContents"><a href="http://blog.csdn.net/zhoubl668?viewmode=contents"><span>
+                    <img src="http://static.blog.csdn.net/images/ico_list.gif">目录视图</span></a></li>
+                <li id="btnView"><a href="http://blog.csdn.net/zhoubl668?viewmode=list"><span>
+                    <img src="http://static.blog.csdn.net/images/ico_summary.gif">摘要视图</span></a></li>
+                <li id="btnRss"><a href="http://blog.csdn.net/zhoubl668/rss/list"><span>
+                    <img src="http://static.blog.csdn.net/images/ico_rss.gif">订阅</span></a></li>
+</ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = "zhoubl668";
+    var _blogger = username;
+    var blog_address = "http://blog.csdn.net/zhoubl668";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "";
+</script>
+
+        <div id="body">
+            <div id="main">
+                <div class="main">
+<div class="notice tracking-ad" data-mod='popu_3' > 
+
+<a href="http://vote.blog.csdn.net/blogstar2013"target="_blank">
+<font color=blue>CSDN2013年度博客之星评选
+ </font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://hero.pongo.cn/Question/Details?ID=168&ExamID=163" target="_blank"><font color=red>文思海辉第一届在线编程大赛
+</font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="http://blog.csdn.net/csdn_ask/article/details/16943685"target="_blank">
+<font color=blue>消灭0回答，赢下载分
+ </font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<a href="http://newsletter.csdn.net/show_book/show_book_list?type=5"target="_blank">
+<font color=red>订阅CSDN社区周刊，及时了解社区精华内容
+ </font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<a href="http://blog.csdn.net/blogdevteam/article/details/16943989"target="_blank">
+<font color=blue>办公大师系列经典丛书 诚聘译者
+ </font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+</div>                    <link href="http://static.blog.csdn.net/css/comment1.css" type="text/css" rel="stylesheet" />
+<link href="http://static.blog.csdn.net/css/style1.css" type="text/css" rel="stylesheet" />
+<div id="article_details" class="details">
+    <div class="article_title">
+    <span class="ico ico_type_Repost"></span>
+    <h3>
+        <span class="link_title"><a href="/zhoubl668/article/details/6942251">
+        分词：词性标注北大标准
+        </a></span>
+    </h3>
+</div>
+
+    <div class="article_manage">
+        <span class="link_categories">
+        分类：
+            <a href="/zhoubl668/article/category/583540">C/C++（win32和linux）</a> 
+            <a href="/zhoubl668/article/category/822563">搜索引擎开发(数据挖掘、海量数据处理、自然语言)</a> 
+            <a href="/zhoubl668/article/category/1065007">中文分词（分词/人名识别（命名实体识别）/词性标注）</a> 
+        </span>
+    <span class="link_postdate">2011-11-07 09:29</span>
+    <span class="link_view" title="阅读次数">714人阅读</span>
+    <span class="link_comments" title="评论次数"><a href="#comments">评论</a>(3)</span>
+    <span class="link_collect"><a href="javascript:void(0);" onclick="javascript:collectArticle('分词：词性标注北大标准','6942251');return false;" title="收藏">收藏</a></span>
+    <span class="link_report"><a href="#report"  onclick="javascript:report(6942251,2);return false;" title="举报">举报</a></span>
+    
+</div>
+<div class="tag2box"><a href='http://www.csdn.net/tag/c' target=_blank>c</a></div>
+
+    
+<div id="article_content" class="article_content">
+
+&nbsp;<span style=""><span style="font-family:Arial; color:#333333; font-size:14px; line-height:26px; text-align:left"></span></span>
+<p><strong>汉语词性对照表[北大标准<wbr>/中科院标准]<a name="16" style="color:rgb(51,102,153); text-decoration:none"></a></strong></p>
+&nbsp;<span>&nbsp;</span>&nbsp;<span style="font-size:13px"></span>
+<table cellspacing="0" cols="5" rules="all" border="1" frame="box" style="border-right:rgb(153,153,153) 1px solid; border-top:rgb(153,153,153) 1px solid; margin-top:0.6em; font-size:13px; margin-bottom:0.3em; border-left:rgb(153,153,153) 1px solid; width:693px; border-bottom:rgb(153,153,153) 1px solid">
+<tbody>
+<tr valign="top" bgcolor="#cccccc">
+<th align="middle" width="17%" style="border-right:rgb(153,153,153) 1px solid; padding-right:6px; border-top:rgb(153,153,153) 1px solid; padding-left:6px; padding-bottom:4px; border-left:rgb(153,153,153) 1px solid; padding-top:4px; border-bottom:rgb(153,153,153) 1px solid; text-align:left">
+<center>词性编码</center>
+</th>
+<th align="middle" width="17%" style="border-right:rgb(153,153,153) 1px solid; padding-right:6px; border-top:rgb(153,153,153) 1px solid; padding-left:6px; padding-bottom:4px; border-left:rgb(153,153,153) 1px solid; padding-top:4px; border-bottom:rgb(153,153,153) 1px solid; text-align:left">
+<center>词性名称</center>
+</th>
+<th align="middle" width="66%" style="border-right:rgb(153,153,153) 1px solid; padding-right:6px; border-top:rgb(153,153,153) 1px solid; padding-left:6px; padding-bottom:4px; border-left:rgb(153,153,153) 1px solid; padding-top:4px; border-bottom:rgb(153,153,153) 1px solid; text-align:left">
+注 解</th>
+</tr>
+<tr valign="top">
+<td class="hang" width="17%" height="31">
+<p align="center"><strong>Ag</strong></p>
+</td>
+<td class="hang" width="17%">
+<p>形语素</p>
+</td>
+<td class="hang" width="66%">
+<p>形容词性语素。形容词代码为 a，语素代码ｇ前面置以A。</p>
+</td>
+</tr>
+<tr valign="top">
+<td class="hang" width="17%">
+<p align="center"><strong>a</strong></p>
+</td>
+<td class="hang" width="17%">
+<p>形容词</p>
+</td>
+<td class="hang" width="66%">
+<p>取英语形容词 adjective的第1个字母<wbr>。</p>
+</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>ad</strong></p>
+</td>
+<td class="hang">
+<p>副形词</p>
+</td>
+<td class="hang">
+<p>直接作状语的形容词。形容词代码<wbr><span>&nbsp;</span>a和副词代码d并在一起。</p>
+</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>an</strong></p>
+</td>
+<td class="hang">
+<p>名形词</p>
+</td>
+<td class="hang">具有名词功能的形容词。形容词代<wbr>码 a和名词代码n并在一起。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>b</strong></p>
+</td>
+<td class="hang">
+<p>区别词</p>
+</td>
+<td class="hang">取汉字“别”的声母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>c</strong></p>
+</td>
+<td class="hang">
+<p>连词</p>
+</td>
+<td class="hang">取英语连词 conjunction的第1个<wbr>字母。</td>
+</tr>
+<tr valign="top">
+<td class="hang" width="17%">
+<div align="center"><strong>dg</strong></div>
+</td>
+<td class="hang" width="17%">
+<p>副语素</p>
+</td>
+<td class="hang" width="66%">副词性语素。副词代码为 d，语素代码ｇ前面置以D。</td>
+</tr>
+<tr valign="top">
+<td class="hang" height="31">
+<p align="center"><strong>d</strong></p>
+</td>
+<td class="hang">
+<p>副词</p>
+</td>
+<td class="hang">取 adverb的第2个字母，因其<wbr>第1个字母已用于形容词。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>e</strong></p>
+</td>
+<td class="hang">
+<p>叹词</p>
+</td>
+<td class="hang">取英语叹词 exclamation的第1个<wbr>字母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>f</strong></p>
+</td>
+<td class="hang">
+<p>方位词</p>
+</td>
+<td class="hang">取汉字“方”</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><span class="cfe">g</span></p>
+</td>
+<td class="hang">
+<p>语素</p>
+</td>
+<td class="hang">绝大多数语素都能作为合成词的“<wbr>词根”，取汉字“根”的声母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><span class="cfe">h</span></p>
+</td>
+<td class="hang">
+<p>前接成分</p>
+</td>
+<td class="hang">取英语 head的第1个字母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><span class="cfe">i</span></p>
+</td>
+<td class="hang">
+<p>成语</p>
+</td>
+<td class="hang">取英语成语 idiom的第1个字母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><span class="cfe">j</span></p>
+</td>
+<td class="hang">
+<p>简称略语</p>
+</td>
+<td class="hang">取汉字“简”的声母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><span class="cfe">k</span></p>
+</td>
+<td class="hang">
+<p>后接成分</p>
+</td>
+<td class="hang">&nbsp;</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>l</strong></p>
+</td>
+<td class="hang">
+<p>习用语</p>
+</td>
+<td class="hang">习用语尚未成为成语，有点“临时<wbr>性”，取“临”的声母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>m</strong></p>
+</td>
+<td class="hang">
+<p>数词</p>
+</td>
+<td class="hang">取英语 numeral的第3个字母，n<wbr>，u已有他用。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>Ng</strong></p>
+</td>
+<td class="hang">
+<p>名语素</p>
+</td>
+<td class="hang">名词性语素。名词代码为 n，语素代码ｇ前面置以N。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>n</strong></p>
+</td>
+<td class="hang">
+<p>名词</p>
+</td>
+<td class="hang">取英语名词 noun的第1个字母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>nr</strong></p>
+</td>
+<td class="hang">
+<p>人名</p>
+</td>
+<td class="hang">名词代码 n和“人(ren)”的声母并在<wbr>一起。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>ns</strong></p>
+</td>
+<td class="hang">
+<p>地名</p>
+</td>
+<td class="hang">名词代码 n和处所词代码s并在一起。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>nt</strong></p>
+</td>
+<td class="hang">
+<p>机构团体</p>
+</td>
+<td class="hang">“团”的声母为 t，名词代码n和t并在一起。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>nz</strong></p>
+</td>
+<td class="hang">
+<p>其他专名</p>
+</td>
+<td class="hang">“专”的声母的第 1个字母为z，名词代码n和z并<wbr>在一起。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>o</strong></p>
+</td>
+<td class="hang">
+<p>拟声词</p>
+</td>
+<td class="hang">取英语拟声词 onomatopoeia的第1<wbr>个字母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>p</strong></p>
+</td>
+<td class="hang">
+<p>介词</p>
+</td>
+<td class="hang">取英语介词 prepositional的第<wbr>1个字母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>q</strong></p>
+</td>
+<td class="hang">
+<p>量词</p>
+</td>
+<td class="hang">取英语 quantity的第1个字母。<wbr></td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>r</strong></p>
+</td>
+<td class="hang">
+<p>代词</p>
+</td>
+<td class="hang">取英语代词 pronoun的第2个字母,因<wbr>p已用于介词。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>s</strong></p>
+</td>
+<td class="hang">
+<p>处所词</p>
+</td>
+<td class="hang">取英语 space的第1个字母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>tg</strong></p>
+</td>
+<td class="hang">
+<p>时语素</p>
+</td>
+<td class="hang">时间词性语素。时间词代码为 t,在语素的代码g前面置以T。<wbr></td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>t</strong></p>
+</td>
+<td class="hang">
+<p>时间词</p>
+</td>
+<td class="hang">取英语 time的第1个字母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><span class="cfe">u</span></p>
+</td>
+<td class="hang">
+<p>助词</p>
+</td>
+<td class="hang">取英语助词 auxiliary</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>vg</strong></p>
+</td>
+<td class="hang">
+<p>动语素</p>
+</td>
+<td class="hang">动词性语素。动词代码为 v。在语素的代码g前面置以V。<wbr></td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><span class="cfe">v</span></p>
+</td>
+<td class="hang">
+<p>动词</p>
+</td>
+<td class="hang">取英语动词 verb的第一个字母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>vd</strong></p>
+</td>
+<td class="hang">
+<p>副动词</p>
+</td>
+<td class="hang">直接作状语的动词。动词和副词的<wbr>代码并在一起。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>vn</strong></p>
+</td>
+<td class="hang">
+<p>名动词</p>
+</td>
+<td class="hang">指具有名词功能的动词。动词和名<wbr>词的代码并在一起。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>w</strong></p>
+</td>
+<td class="hang">
+<p>标点符号</p>
+</td>
+<td class="hang">&nbsp;</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><span class="cfe">x</span></p>
+</td>
+<td class="hang">
+<p>非语素字</p>
+</td>
+<td class="hang">非语素字只是一个符号，字母 x通常用于代表未知数、符号。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>y</strong></p>
+</td>
+<td class="hang">
+<p>语气词</p>
+</td>
+<td class="hang">取汉字“语”的声母。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>z</strong></p>
+</td>
+<td class="hang">
+<p>状态词</p>
+</td>
+<td class="hang">取汉字“状”的声母的前一个字母<wbr>。</td>
+</tr>
+<tr valign="top">
+<td class="hang">
+<p align="center"><strong>un</strong></p>
+</td>
+<td class="hang">
+<p>未知词</p>
+</td>
+<td class="hang">不可识别词及用户自定义词组。取<wbr>英文Unkonwn首两个字母。<wbr><strong>(非北大标准，CSW分词中定义<wbr>)</strong></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" style="float: right;">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more">更多</span>
+<a class="shareCount"></a>
+</div>
+<!-- Baidu Button END -->
+
+
+<!--192.168.100.33-->
+<div class="article_next_prev">
+            <li class="prev_article"><span>上一篇：</span><a href="/zhoubl668/article/details/6935267">如果程序出现Segment fault错误，该如何排错？谈SIGBUS和SIGSEGV</a></li>
+            <li class="next_article"><span>下一篇：</span><a href="/zhoubl668/article/details/6942287">隐马尔可夫模型及其在分词中的简单应用</a></li>
+</div>
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1536434" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+</div>
+    <div id="ad_cen">
+        <script type="text/javascript">            BAIDU_CLB_SLOT_ID = "117306";</script>
+        <script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
+    </div>
+    <script type="text/javascript">
+        //new Ad(4, 'ad_cen');
+    </script>
+<div id="comment_title" class="panel_head">
+    查看评论<a name="comments"></a></div>
+<div id="comment_list">
+</div>
+<div id="comment_bar">
+</div>
+<div id="comment_form">
+</div>
+<div class="announce">
+    * 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+<script type="text/javascript">
+    var fileName = '6942251';
+    var commentscount = 3;
+    var islock = false
+</script>
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/comment.js"></script>
+    <div id="ad_bot">
+    </div>
+    <script type="text/javascript">
+    new Ad(5, 'ad_bot');
+    </script>
+<div id="report_dialog">
+</div>
+<div id="d-top" style="display: none;">
+    <a id="d-top-a" href="#" title="回到顶部">
+        <img src="http://static.blog.csdn.net/images/top.png" alt="TOP" /></a>
+</div>
+<script type="text/javascript">
+    $(function ()
+    {
+        var d_top = $('#d-top');
+        document.onscroll = function ()
+        {
+            var scrTop = (document.body.scrollTop || document.documentElement.scrollTop);
+            if (scrTop > 500)
+            {
+                d_top.show();
+            } else
+            {
+                d_top.hide();
+            }
+        }
+        $('#d-top-a').click(function ()
+        {
+            scrollTo(0, 0);
+            this.blur();
+            return false;
+        });
+    });
+  
+</script>
+<style type="text/css">
+    .tag_list
+    {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #D7CBC1;
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        list-style: none outside none;
+        margin: 10px 2% 0 1%;
+        padding: 1px;
+    }
+    .tag_list h5
+    {
+        background: none repeat scroll 0 0 #E0DBD3;
+        color: #47381C;
+        font-size: 12px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        margin: 0;
+    }
+    .tag_list h5 a
+    {
+        color: #47381C;
+    }
+    .classify
+    {
+        margin: 10px 0;
+        padding: 4px 12px 8px;
+    }
+    .classify a
+    {
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+</style>
+<div class="tag_list">
+    <h5>
+        <a href="http://www.csdn.net/tag/" target="_blank">核心技术类目</a></h5>
+    <div class="classify">
+<a title="全部主题" href="http://www.csdn.net/tag" target="_blank" onclick="LogClickCount(this,336);">全部主题</a>
+<a title="Java" href="http://www.csdn.net/tag/Java" target="_blank" onclick="LogClickCount(this,336);">Java</a>
+<a title="VPN" href="http://www.csdn.net/tag/vpn" target="_blank" onclick="LogClickCount(this,336);">VPN</a>
+<a title="Android" href="http://www.csdn.net/tag/android" target="_blank" onclick="LogClickCount(this,336);">Android</a>
+<a title="iOS" href="http://www.csdn.net/tag/ios" target="_blank" onclick="LogClickCount(this,336);">iOS</a>
+<a title="ERP" href="http://www.csdn.net/tag/erp" target="_blank" onclick="LogClickCount(this,336);">ERP</a>
+<a title="IE10" href="http://www.csdn.net/tag/ie10" target="_blank" onclick="LogClickCount(this,336);">IE10</a>
+<a title="Eclipse" href="http://www.csdn.net/tag/eclipse" target="_blank" onclick="LogClickCount(this,336);">Eclipse</a>
+<a title="CRM" href="http://www.csdn.net/tag/crm" target="_blank" onclick="LogClickCount(this,336);">CRM</a>
+<a title="JavaScript" href="http://www.csdn.net/tag/javascript" target="_blank" onclick="LogClickCount(this,336);">JavaScript</a>
+<a title="Ubuntu" href="http://www.csdn.net/tag/ubuntu" target="_blank" onclick="LogClickCount(this,336);">Ubuntu</a>
+<a title="NFC" href="http://www.csdn.net/tag/nfc" target="_blank" onclick="LogClickCount(this,336);">NFC</a>
+<a title="WAP" href="http://www.csdn.net/tag/wap" target="_blank" onclick="LogClickCount(this,336);">WAP</a>
+<a title="jQuery" href="http://www.csdn.net/tag/jquery" target="_blank" onclick="LogClickCount(this,336);">jQuery</a>
+<a title="数据库" href="http://www.csdn.net/tag/数据库" target="_blank" onclick="LogClickCount(this,336);">数据库</a>
+<a title="BI" href="http://www.csdn.net/tag/bi" target="_blank" onclick="LogClickCount(this,336);">BI</a>
+<a title="HTML5" href="http://www.csdn.net/tag/html5" target="_blank" onclick="LogClickCount(this,336);">HTML5</a>
+<a title="Spring" href="http://www.csdn.net/tag/spring" target="_blank" onclick="LogClickCount(this,336);">Spring</a>
+<a title="Apache" href="http://www.csdn.net/tag/apache" target="_blank" onclick="LogClickCount(this,336);">Apache</a>
+<a title="Hadoop" href="http://www.csdn.net/tag/hadoop" target="_blank" onclick="LogClickCount(this,336);">Hadoop</a>
+<a title=".NET" href="http://www.csdn.net/tag/.net" target="_blank" onclick="LogClickCount(this,336);">.NET</a>
+<a title="API" href="http://www.csdn.net/tag/api" target="_blank" onclick="LogClickCount(this,336);">API</a>
+<a title="HTML" href="http://www.csdn.net/tag/html" target="_blank" onclick="LogClickCount(this,336);">HTML</a>
+<a title="SDK" href="http://www.csdn.net/tag/sdk" target="_blank" onclick="LogClickCount(this,336);">SDK</a>
+<a title="IIS" href="http://www.csdn.net/tag/iis" target="_blank" onclick="LogClickCount(this,336);">IIS</a>
+<a title="Fedora" href="http://www.csdn.net/tag/fedora" target="_blank" onclick="LogClickCount(this,336);">Fedora</a>
+<a title="XML" href="http://www.csdn.net/tag/xml" target="_blank" onclick="LogClickCount(this,336);">XML</a>
+<a title="LBS" href="http://www.csdn.net/tag/lbs" target="_blank" onclick="LogClickCount(this,336);">LBS</a>
+<a title="Unity" href="http://www.csdn.net/tag/unity" target="_blank" onclick="LogClickCount(this,336);">Unity</a>
+<a title="Splashtop" href="http://www.csdn.net/tag/splashtop" target="_blank" onclick="LogClickCount(this,336);">Splashtop</a>
+<a title="UML" href="http://www.csdn.net/tag/uml" target="_blank" onclick="LogClickCount(this,336);">UML</a>
+<a title="components" href="http://www.csdn.net/tag/components" target="_blank" onclick="LogClickCount(this,336);">components</a>
+<a title="Windows Mobile" href="http://www.csdn.net/tag/windowsmobile" target="_blank" onclick="LogClickCount(this,336);">Windows Mobile</a>
+<a title="Rails" href="http://www.csdn.net/tag/rails" target="_blank" onclick="LogClickCount(this,336);">Rails</a>
+<a title="QEMU" href="http://www.csdn.net/tag/qemu" target="_blank" onclick="LogClickCount(this,336);">QEMU</a>
+<a title="KDE" href="http://www.csdn.net/tag/kde" target="_blank" onclick="LogClickCount(this,336);">KDE</a>
+<a title="Cassandra" href="http://www.csdn.net/tag/cassandra" target="_blank" onclick="LogClickCount(this,336);">Cassandra</a>
+<a title="CloudStack" href="http://www.csdn.net/tag/cloudstack" target="_blank" onclick="LogClickCount(this,336);">CloudStack</a>
+<a title="FTC" href="http://www.csdn.net/tag/ftc" target="_blank" onclick="LogClickCount(this,336);">FTC</a>
+<a title="coremail" href="http://www.csdn.net/tag/coremail" target="_blank" onclick="LogClickCount(this,336);">coremail</a>
+<a title="OPhone " href="http://www.csdn.net/tag/ophone " target="_blank" onclick="LogClickCount(this,336);">OPhone </a>
+<a title="CouchBase" href="http://www.csdn.net/tag/couchbase" target="_blank" onclick="LogClickCount(this,336);">CouchBase</a>
+<a title="云计算" href="http://www.csdn.net/tag/云计算" target="_blank" onclick="LogClickCount(this,336);">云计算</a>
+<a title="iOS6" href="http://www.csdn.net/tag/iOS6" target="_blank" onclick="LogClickCount(this,336);">iOS6</a>
+<a title="Rackspace " href="http://www.csdn.net/tag/rackspace " target="_blank" onclick="LogClickCount(this,336);">Rackspace </a>
+<a title="Web App" href="http://www.csdn.net/tag/webapp" target="_blank" onclick="LogClickCount(this,336);">Web App</a>
+<a title="SpringSide" href="http://www.csdn.net/tag/springside" target="_blank" onclick="LogClickCount(this,336);">SpringSide</a>
+<a title="Maemo" href="http://www.csdn.net/tag/maemo" target="_blank" onclick="LogClickCount(this,336);">Maemo</a>
+<a title="Compuware" href="http://www.csdn.net/tag/compuware" target="_blank" onclick="LogClickCount(this,336);">Compuware</a>
+<a title="大数据" href="http://www.csdn.net/tag/大数据" target="_blank" onclick="LogClickCount(this,336);">大数据</a>
+<a title="aptech" href="http://www.csdn.net/tag/aptech" target="_blank" onclick="LogClickCount(this,336);">aptech</a>
+<a title="Perl" href="http://www.csdn.net/tag/perl" target="_blank" onclick="LogClickCount(this,336);">Perl</a>
+<a title="Tornado" href="http://www.csdn.net/tag/tornado" target="_blank" onclick="LogClickCount(this,336);">Tornado</a>
+<a title="Ruby" href="http://www.csdn.net/tag/ruby" target="_blank" onclick="LogClickCount(this,336);">Ruby</a>
+<a title="Hibernate" href="http://www.csdn.net/hibernate" target="_blank" onclick="LogClickCount(this,336);">Hibernate</a>
+<a title="ThinkPHP" href="http://www.csdn.net/tag/thinkphp" target="_blank" onclick="LogClickCount(this,336);">ThinkPHP</a>
+<a title="Spark" href="http://www.csdn.net/tag/spark" target="_blank" onclick="LogClickCount(this,336);">Spark</a>
+<a title="HBase" href="http://www.csdn.net/tag/hbase" target="_blank" onclick="LogClickCount(this,336);">HBase</a>
+<a title="Pure" href="http://www.csdn.net/tag/pure" target="_blank" onclick="LogClickCount(this,336);">Pure</a>
+<a title="Solr" href="http://www.csdn.net/tag/solr" target="_blank" onclick="LogClickCount(this,336);">Solr</a>
+<a title="Angular" href="http://www.csdn.net/tag/angular" target="_blank" onclick="LogClickCount(this,336);">Angular</a>
+<a title="Cloud Foundry" href="http://www.csdn.net/tag/cloudfoundry" target="_blank" onclick="LogClickCount(this,336);">Cloud Foundry</a>
+<a title="Redis" href="http://www.csdn.net/tag/redis" target="_blank" onclick="LogClickCount(this,336);">Redis</a>
+<a title="Scala" href="http://www.csdn.net/tag/scala" target="_blank" onclick="LogClickCount(this,336);">Scala</a>
+<a title="Django" href="http://www.csdn.net/tag/django" target="_blank" onclick="LogClickCount(this,336);">Django</a>
+<a title="Bootstrap" href="http://www.csdn.net/tag/bootstrap" target="_blank" onclick="LogClickCount(this,336);">Bootstrap</a>
+    </div>
+</div>
+
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            <div id="side">
+    <div class="side">
+<div id="panel_Profile" class="panel">
+<ul class="panel_head"><span>个人资料</span></ul>
+<ul class="panel_body profile">
+<div id="blog_userface">
+    <a href="http://my.csdn.net/zhoubl668" target="_blank">
+    <img src="http://avatar.csdn.net/5/2/B/1_zhoubl668.jpg" title="访问我的空间" style="max-width:90%"/>
+    </a>
+    <br />
+    <span><a href="http://my.csdn.net/zhoubl668" class="user_name" target="_blank">zhoubl668</a></span>
+</div>
+<div class="interact">
+<a href="javascript:void(0);" class="attent" id="span_add_follow" title="[加关注]"></a>
+<a href="javascript:void(0);" class="letter" onclick="loginto(1)" title="[发私信]"></a>
+</div>
+<div id="blog_medal">
+</div>
+<ul id="blog_rank">
+    <li>访问：<span>773689次</span></li>
+    <li>积分：<span>12517分</span></li>
+    <li>排名：<span>第205名</span></li>
+</ul>
+<ul id="blog_statistics">
+    <li>原创：<span>469篇</span></li>
+    <li>转载：<span>313篇</span></li>
+    <li>译文：<span>0篇</span></li>
+    <li>评论：<span>184条</span></li>
+</ul>
+</ul>
+</div>
+
+
+<div class="panel" id="panel_Search">
+    <ul class="panel_head"><span>文章搜索</span></ul>
+    <ul class="panel_body">
+        <form id="frmSearch" action="http://so.csdn.net/search" class="form_search" target="_blank">
+        <span><input id="inputSearch" type="text" class="blogsearch" title="请输入关键字" /></span>
+        <input id="btnSubmit" type="submit" value="搜索" title="search in blog" />
+        <input type="hidden" name="q" id="inputQ" />
+        <input type="hidden" name="t" value="blog" />
+        <a id="btnSearchBlog" target="_blank"></a>
+        </form>
+    </ul>
+</div><div id="panel_Category" class="panel">
+<ul class="panel_head"><span>文章分类</span></ul>
+<ul class="panel_body">
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/583540">C/C++（win32和linux）</a><span>(369)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/457632">MFC/QT开发</a><span>(2)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/641756">并行编程MPI/Openmp/分布式/云计算、hadoop</a><span>(31)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/518283">网络通信/socket/web services/corba</a><span>(4)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/822563">搜索引擎开发(数据挖掘、海量数据处理、自然语言)</a><span>(424)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/518282">数据库开发/Oracle/SQL</a><span>(0)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/690357">经济/生活/哲学</a><span>(93)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/641757">遥感图像软件、GIS/GDAL/OSSIM</a><span>(8)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/840713">开源软件/脚本python</a><span>(7)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/840721">设计模式、软件架构</a><span>(2)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/846544">移动开发/IOS(iPhone)/android</a><span>(4)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/849772">转型——创业/经济/金融/投资/理财</a><span>(387)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/1065007">中文分词（分词/人名识别（命名实体识别）/词性标注）</a><span>(65)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/zhoubl668/article/category/1309605">程序交易/智能交易</a><span>(2)</span>
+</li>
+</ul>
+</div><div id="panel_Archive" class="panel">
+<ul class="panel_head"><span>文章存档</span></ul>
+<ul class="panel_body">
+<div id="archive_list">
+<!--归档统计-->
+<li><a href="http://blog.csdn.net/zhoubl668/article/month/2013/11">2013年11月</a><span>(5)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2013/10">2013年10月</a><span>(9)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2013/09">2013年09月</a><span>(7)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2013/08">2013年08月</a><span>(13)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2013/07">2013年07月</a><span>(5)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2013/06">2013年06月</a><span>(6)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2013/05">2013年05月</a><span>(15)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2013/04">2013年04月</a><span>(6)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2013/03">2013年03月</a><span>(17)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2013/02">2013年02月</a><span>(8)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2013/01">2013年01月</a><span>(24)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2012/12">2012年12月</a><span>(23)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2012/11">2012年11月</a><span>(8)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2012/10">2012年10月</a><span>(13)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2012/09">2012年09月</a><span>(11)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2012/08">2012年08月</a><span>(36)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2012/07">2012年07月</a><span>(44)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2012/06">2012年06月</a><span>(9)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2012/05">2012年05月</a><span>(8)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2012/04">2012年04月</a><span>(6)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2012/03">2012年03月</a><span>(24)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2012/02">2012年02月</a><span>(28)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2012/01">2012年01月</a><span>(46)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2011/12">2011年12月</a><span>(13)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2011/11">2011年11月</a><span>(65)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2011/10">2011年10月</a><span>(21)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2011/09">2011年09月</a><span>(14)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2011/07">2011年07月</a><span>(21)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2011/06">2011年06月</a><span>(12)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2011/05">2011年05月</a><span>(5)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2011/02">2011年02月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2011/01">2011年01月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2010/09">2010年09月</a><span>(1)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2010/08">2010年08月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2010/07">2010年07月</a><span>(3)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2010/06">2010年06月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2010/05">2010年05月</a><span>(5)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2010/04">2010年04月</a><span>(7)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2010/03">2010年03月</a><span>(6)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2010/02">2010年02月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2010/01">2010年01月</a><span>(6)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2009/12">2009年12月</a><span>(6)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2009/11">2009年11月</a><span>(2)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2009/10">2009年10月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2009/09">2009年09月</a><span>(10)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2009/08">2009年08月</a><span>(15)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2009/07">2009年07月</a><span>(13)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2009/06">2009年06月</a><span>(23)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2009/05">2009年05月</a><span>(11)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2009/04">2009年04月</a><span>(11)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2009/03">2009年03月</a><span>(30)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2009/02">2009年02月</a><span>(32)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2009/01">2009年01月</a><span>(31)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2008/12">2008年12月</a><span>(7)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2008/11">2008年11月</a><span>(6)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2008/10">2008年10月</a><span>(4)</span></li><li><a href="http://blog.csdn.net/zhoubl668/article/month/2008/09">2008年09月</a><span>(16)</span></li>
+</div>
+</ul>
+</div>
+<div id="hotarticls" class="panel">
+<ul class="panel_head"><span>阅读排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="/zhoubl668/article/details/3704604" title="C++随机数的用法">C++随机数的用法</a><span>(21803)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/7980041" title="gdb调试 打印输出长变量的值到外部文本里">gdb调试 打印输出长变量的值到外部文本里</a><span>(18490)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/7749348" title="雷士照明股权连环局（第一、二、三季完整版）">雷士照明股权连环局（第一、二、三季完整版）</a><span>(18485)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/3858576" title="oracle创建表空间.创建用户.创建表">oracle创建表空间.创建用户.创建表</a><span>(14173)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/3739051" title="VC  INI文件读写">VC  INI文件读写</a><span>(11666)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/4301006" title="CToolTipCtrl使用详细解说">CToolTipCtrl使用详细解说</a><span>(10791)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/7164674" title="《参考消息》评出2011年十大涉华新闻">《参考消息》评出2011年十大涉华新闻</a><span>(10040)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/3952967" title="makefile的语法及写法">makefile的语法及写法</a><span>(9949)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/3733176" title="VC中CString,int,string,char*之间的转换">VC中CString,int,string,char*之间的转换</a><span>(9266)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/7933294" title="大学生破译周鸿祎手机号 李开复放“橄榄枝”">大学生破译周鸿祎手机号 李开复放“橄榄枝”</a><span>(8966)</span>
+</li>
+</ul>
+</div>
+<div id="hotarticls2" class="panel">
+<ul class="panel_head"><span>评论排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="/zhoubl668/article/details/3704604" title="C++随机数的用法">C++随机数的用法</a><span>(10)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/3785983" title="解决在VS2005中“当前不会命中断点。源代码与原始版本不同”的问题 ">解决在VS2005中“当前不会命中断点。源代码与原始版本不同”的问题 </a><span>(8)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/3872695" title="CList类">CList类</a><span>(7)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/3858576" title="oracle创建表空间.创建用户.创建表">oracle创建表空间.创建用户.创建表</a><span>(6)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/3739051" title="VC  INI文件读写">VC  INI文件读写</a><span>(6)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/6603276" title="GDAL读取HDF,NETCDF等subdatasets数据（多个数据集数据）">GDAL读取HDF,NETCDF等subdatasets数据（多个数据集数据）</a><span>(6)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/4245539" title="vc操作excel文件的类 与CSpreadSheet 中文文档">vc操作excel文件的类 与CSpreadSheet 中文文档</a><span>(5)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/6602319" title="VC++8.0下编译支持HDF4和HDF5的GDAL">VC++8.0下编译支持HDF4和HDF5的GDAL</a><span>(5)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/7416746" title="Linux获取网页源码的几种方法  linux爬虫程序">Linux获取网页源码的几种方法  linux爬虫程序</a><span>(4)</span>
+</li>
+<li>
+<a href="/zhoubl668/article/details/3865781" title="在MFC应用程序中动态嵌入Word文档 ">在MFC应用程序中动态嵌入Word文档 </a><span>(4)</span>
+</li>
+</ul>
+</div>
+<div id="homepageArticles" class="panel tracking-ad" data-mod="popu_4">
+<ul class="panel_head"><span>推荐文章</span></ul>
+<ul class="panel_body" id="ad_commend"></ul>
+</div>
+<script type="text/javascript">
+ new Ad(12, 'ad_commend');
+</script><div id="newcomments" class="panel">
+<ul class="panel_head"><span>最新评论</span></ul>
+<ul class="panel_body itemlist">
+    <li>
+    <a href="/zhoubl668/article/details/3952967#comments">makefile的语法及写法</a>
+    <p style="margin:0px;"><a href="/zhoubl668" class="user_name">zhoubl668</a>:
+@u012810488:呵呵，转过去保存一下，其实我转载保存多数是给自己备份用的
+    </p>
+    </li>
+    <li>
+    <a href="/zhoubl668/article/details/7759370#comments">Ubuntu 11.04 32位系统下 SRILM 的配置详解</a>
+    <p style="margin:0px;"><a href="/oizz01" class="user_name">oizz01</a>:
+好文章点赞，顺便分享过去了，谢谢博主^_^
+    </p>
+    </li>
+    <li>
+    <a href="/zhoubl668/article/details/3952967#comments">makefile的语法及写法</a>
+    <p style="margin:0px;"><a href="/u012810488" class="user_name">u012810488</a>:
+能否问一下，我很想转载你这篇文章，我要怎么做啊
+    </p>
+    </li>
+    <li>
+    <a href="/zhoubl668/article/details/6639801#comments">数据挖掘聚类算法</a>
+    <p style="margin:0px;"><a href="/aidame" class="user_name">aidame</a>:
+学习了
+    </p>
+    </li>
+    <li>
+    <a href="/zhoubl668/article/details/7740396#comments">基于大规模语料的新词发现算法</a>
+    <p style="margin:0px;"><a href="/u011408382" class="user_name">u011408382</a>:
+写的真不错，准备着手实现，看看效果如何
+    </p>
+    </li>
+    <li>
+    <a href="/zhoubl668/article/details/6641350#comments">接口生成器SWIG简介</a>
+    <p style="margin:0px;"><a href="/junjiegis" class="user_name">junjiegis</a>:
+你好，我也是刚刚接触。从C++源文件开始，我刚刚走通。但是我手上只有C++dll和lib文件，老师让...
+    </p>
+    </li>
+    <li>
+    <a href="/zhoubl668/article/details/7024034#comments">基于CRF的中文分词</a>
+    <p style="margin:0px;"><a href="/hj398984059" class="user_name">hj398984059</a>:
+谢谢，总算有一个回复我的了，我看你对数据挖掘，自然语言处理这些很有心得，能和你私下交流嘛，我是个在校...
+    </p>
+    </li>
+    <li>
+    <a href="/zhoubl668/article/details/7024034#comments">基于CRF的中文分词</a>
+    <p style="margin:0px;"><a href="/zhoubl668" class="user_name">zhoubl668</a>:
+@hj398984059:一般是程序自动生产的预料会快些，也有人工自动标注的。
+    </p>
+    </li>
+    <li>
+    <a href="/zhoubl668/article/details/7024034#comments">基于CRF的中文分词</a>
+    <p style="margin:0px;"><a href="/hj398984059" class="user_name">hj398984059</a>:
+你好，我想问下，这个训练的预料的标注是人工标注的吗，还是程序控制，自动生成这个格式，因为crf++训...
+    </p>
+    </li>
+    <li>
+    <a href="/zhoubl668/article/details/3952988#comments">makefile的语法及写法(二)</a>
+    <p style="margin:0px;"><a href="/zhoubl668" class="user_name">zhoubl668</a>:
+@sunyang500:是的，现在大多数情况不用我们再去写具体的makefile啦，大部分情况制定规...
+    </p>
+    </li>
+</ul>
+</div>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+
+            <div class="clear">
+            </div>
+        </div>
+        
+
+<script type="text/javascript" src="http://static.blog.csdn.net/scripts/newblog.min.js"></script>
+<script type="text/javascript" src="http://medal.blog.csdn.net/showblogmedal.ashx?blogid=408430"></script>
+<script type="text/javascript">
+    document.write('<script type="text/javascript" src="http://csdnimg.cn/pubfooter/js/publib_footer.js?' + Math.floor(new Date() / 120000).toString(36) + '="></' + 'script>');
+</script>
+    <script type="text/javascript" src="http://pass.csdn.net/content/loginbox/login.js"></script>
+<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=24 border=0 width=0 height=0>");</script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-blog.js"></script>
+<script type="text/javascript" src="http://zz.csdn.net/js/count.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function __get_code_toolbar(snippet_id) {
+            return $("<a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "' target='_blank' title='在CODE上查看代码片' style='text-indent:0;'><img src='https://code.csdn.net/assets/CODE_ico.png' width=12 height=12 alt='在CODE上查看代码片' style='position:relative;top:1px;left:2px;'/></a>"
+                    + "<a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "/fork' target='_blank' title='派生到我的代码片'  style='text-indent:0;'><img src='https://code.csdn.net/assets/ico_fork.svg' width=12 height=12 alt='派生到我的代码片' style='position:relative;top:2px;left:2px;'/></a>");
+        }
+        
+        $("[code_snippet_id]").each(function () {
+            __s_id = $(this).attr("code_snippet_id");
+            if (__s_id != null && __s_id != "" && __s_id != 0 && parseInt(__s_id) > 70020) {
+                __code_tool = __get_code_toolbar(__s_id);
+                $(this).prev().find(".tools").append(__code_tool);
+            }
+        });
+    });
+</script>
+
+    </div>
+</body>
+</html>
