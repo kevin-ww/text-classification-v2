@@ -2,8 +2,6 @@ package com.kvn.classifier;
 
 import java.util.List;
 
-import com.kvn.classifier.common.ProductReview;
-
 /**
  * Multi-label classification
  * http://en.wikipedia.org/wiki/Multi-label_classification

@@ -27,10 +27,6 @@ import com.kvn.classifier.common.ProductReview;
 import com.kvn.classifier.common.ProductReviewWithLabels;
 import com.kvn.classifier.ruleengine.RuleSet;
 import com.kvn.classifier.ruleengine.UriConstants;
-import com.kvn.classifier.ruleengine.rule.BrandRule;
-import com.kvn.classifier.ruleengine.rule.FlavorRule;
-import com.kvn.classifier.ruleengine.rule.LogisticsRule;
-import com.kvn.classifier.ruleengine.rule.WordOfMouthRule;
 import com.kvn.classifier.ruleengine.util.RuleEngineLog;
 
 public class RuleBasedMultilabelClassifier implements Classifier<ProductReview> {
@@ -39,27 +35,29 @@ public class RuleBasedMultilabelClassifier implements Classifier<ProductReview> 
 
   private static StatelessRuleSession srs;
 
-  private static final String RULES_CONFIG_XML = "com/kvn/classifier/ruleengine/rule/combined_rules_definition.xml";
+  private static final String RULES_CONFIG_XML = "com/kvn/classifier/ruleengine/rule/ruleset_01.xml";
 
   private RuleSet initRuleSet() {
 
     ApplicationContext ctx = new ClassPathXmlApplicationContext(
         RULES_CONFIG_XML);
+    
+    RuleSet ruleSet   = (RuleSet) ctx.getBean("testRuleSet01");
 
-    LogisticsRule lrule = (LogisticsRule) ctx.getBean("logisticsRule");
+//    LogisticsRule lrule = (LogisticsRule) ctx.getBean("logisticsRule");
 
-    FlavorRule frule = (FlavorRule) ctx.getBean("flavorRule");
-
-    BrandRule brule = (BrandRule) ctx.getBean("brandRule");
-
-    WordOfMouthRule wrule = (WordOfMouthRule) ctx.getBean("womRule");
-
-    RuleSet ruleSet = new RuleSet("logistics_rule&flavor_rule.only");
-
-    ruleSet.addRule(lrule);
-    ruleSet.addRule(frule);
-    ruleSet.addRule(brule);
-    ruleSet.addRule(wrule);
+//    FlavorRule frule = (FlavorRule) ctx.getBean("flavorRule");
+//
+//    BrandRule brule = (BrandRule) ctx.getBean("brandRule");
+//
+//    WordOfMouthRule wrule = (WordOfMouthRule) ctx.getBean("womRule");
+//
+//    RuleSet ruleSet = new RuleSet("logistics_rule&flavor_rule.only");
+//
+//    ruleSet.addRule(lrule);
+//    ruleSet.addRule(frule);
+//    ruleSet.addRule(brule);
+//    ruleSet.addRule(wrule);
 
     return ruleSet;
 
@@ -72,7 +70,7 @@ public class RuleBasedMultilabelClassifier implements Classifier<ProductReview> 
 
     // Initialization implementation goes here;
 
-    // JCR94 compliant rule engine is able to being deployed in distribute way;
+    // JCR94 compliant rule engine is able to being deployed in distributed way;
 
     String ruleEngineServiceUri = UriConstants.RULE_ENGINE_SERVICE_URI;
 

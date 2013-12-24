@@ -28,9 +28,14 @@ public class RuleSet implements Serializable {
   }
 
   public RuleSet(String name, String description) {
+    this(name, description, null);
+  }
+
+  public RuleSet(String name, String description, List<Rule> rules) {
+    // super();
     this.name = name;
     this.description = description;
-    this.rules = new ArrayList<Rule>();
+    this.rules = rules;
   }
 
   public String getName() {
@@ -59,6 +64,18 @@ public class RuleSet implements Serializable {
 
   public List<Rule> getRules() {
     return rules;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public void setRules(List<Rule> rules) {
+    this.rules = rules;
   }
 
   @Override
