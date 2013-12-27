@@ -41,23 +41,8 @@ public class RuleBasedMultilabelClassifier implements Classifier<ProductReview> 
 
     ApplicationContext ctx = new ClassPathXmlApplicationContext(
         RULES_CONFIG_XML);
-    
-    RuleSet ruleSet   = (RuleSet) ctx.getBean("testRuleSet01");
 
-//    LogisticsRule lrule = (LogisticsRule) ctx.getBean("logisticsRule");
-
-//    FlavorRule frule = (FlavorRule) ctx.getBean("flavorRule");
-//
-//    BrandRule brule = (BrandRule) ctx.getBean("brandRule");
-//
-//    WordOfMouthRule wrule = (WordOfMouthRule) ctx.getBean("womRule");
-//
-//    RuleSet ruleSet = new RuleSet("logistics_rule&flavor_rule.only");
-//
-//    ruleSet.addRule(lrule);
-//    ruleSet.addRule(frule);
-//    ruleSet.addRule(brule);
-//    ruleSet.addRule(wrule);
+    RuleSet ruleSet = (RuleSet) ctx.getBean("testRuleSet01");
 
     return ruleSet;
 
@@ -132,6 +117,7 @@ public class RuleBasedMultilabelClassifier implements Classifier<ProductReview> 
       throws InvalidRuleSessionException, RemoteException {
 
     @SuppressWarnings("unchecked")
+    
     List<ProductReviewWithLabels> prs = srs.executeRules(Arrays.asList(obj));
 
     return prs.get(0).getLabels();

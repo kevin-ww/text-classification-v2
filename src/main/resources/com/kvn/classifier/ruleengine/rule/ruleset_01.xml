@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/util 
     http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<bean id="ruleSet" class="com.kvn.classifier.ruleengine.RuleSet">
+	<bean id="testRuleSet01" class="com.kvn.classifier.ruleengine.RuleSet">
 		<constructor-arg name="name" value="test rule set" />
 		<constructor-arg name="description" value="rule set for test" />
 		<constructor-arg name="rules">

@@ -14,7 +14,7 @@ public class ProductReviewProcessor implements
   @Override
   public ProductReviewWithLabels process(ProductReview item) throws Exception {
 
-    System.out.println("now processing :" + item);
+    System.out.println(Thread.currentThread().getName()+ " now processing :" + item);
 
     List<String> lables = RuleBasedMultilabelClassifier.getInstance()
         .classifer(item);

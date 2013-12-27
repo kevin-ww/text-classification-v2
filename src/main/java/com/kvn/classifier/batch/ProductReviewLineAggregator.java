@@ -9,6 +9,8 @@ public class ProductReviewLineAggregator implements
 
   @Override
   public String aggregate(ProductReviewWithLabels item) {
+    System.out.println(Thread.currentThread().getName() + " now writing out "
+        + item);
     return item.toString();
   }
 
